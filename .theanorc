@@ -1,0 +1,9 @@
+[global]
+floatX = float64
+device = cpu
+optimizer = fast_compile
+exception_verbosity = high
+mode = FAST_RUN
+
+[cuda]
+root = /usr/local/cuda
