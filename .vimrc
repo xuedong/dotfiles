@@ -24,6 +24,7 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'vim-latex/vim-latex'
 
 " all plugins must be added before this line
 call vundle#end()
