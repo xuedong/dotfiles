@@ -58,6 +58,7 @@ alias grep="grep $GREP_OPTIONS"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias dk="docker"
 
 # quick edit
 alias zshrc="vim ~/.zshrc"
