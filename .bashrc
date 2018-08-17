@@ -127,7 +127,7 @@ alias vpn='/opt/cisco/anyconnect/bin/vpn'
 export PATH="/home/xuedong/Programming/Trochilus/anaconda3/bin:$PATH"
 
 # julia path
-export PATH="/home/xuedong/Programming/Trochilus/julia-903644385b/bin:$PATH"
+export PATH="/home/xuedong/Programming/Trochilus/julia-1.0.0/bin:$PATH"
 
 # Rust path
 export PATH="/home/xuedong/.cargo/bin:$PATH"
