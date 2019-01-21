@@ -20,11 +20,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'vim-latex/vim-latex'
+Plugin 'dracula/vim'
+Plugin 'udalov/kotlin-vim'
 
 " all plugins must be added before this line
 call vundle#end()
@@ -38,6 +41,11 @@ Plug 'fatih/vim-go'
 
 " all plugins must be added before this line
 call plug#end()
+
+" powerline plugin
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 
 " specify split areas
 set splitbelow
@@ -81,12 +89,12 @@ let python_highlight_all=1
 syntax on
 
 " color scheme logic
-if has('gui_running')
-	set background=dark
-	colorscheme solarized
-else
-	colorscheme zenburn
-endif
+"if has('gui_running')
+"	set background=dark
+"	colorscheme solarized
+"else
+"	colorscheme zenburn
+"endif
 
 " switching between color schemes
 call togglebg#map("<F5>")

@@ -176,3 +176,13 @@ export PATH="/home/xuedong/Programming/Trochilus/git-sizer-1.0.0-linux-amd64:$PA
 
 # source dotfiles
 source ~/.aliases
+
+# powerline
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /home/xuedong/Programming/Trochilus/anaconda3/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/xuedong/.sdkman"
+[[ -s "/home/xuedong/.sdkman/bin/sdkman-init.sh" ]] && source "/home/xuedong/.sdkman/bin/sdkman-init.sh"
