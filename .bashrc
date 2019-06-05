@@ -132,6 +132,9 @@ export PATH="/home/xuedong/Programming/Trochilus/julia-1.0.0/bin:$PATH"
 # Rust path
 export PATH="/home/xuedong/.cargo/bin:$PATH"
 
+# PyCharm Pro path
+export PATH="/home/xuedong/Programming/Trochilus/pycharm-professional-2019.1.3/pycharm-2019.1.3/bin:$PATH"
+
 # linux logo
 #linuxlogo -L 14
 
@@ -149,16 +152,22 @@ export PATH="$GOPATH/bin:$PATH"
 export LD_LIBRARY_PATH=/usr/lib/jvm/default-java/lib/amd64:/usr/lib/jvm/default-java/jre/lib/amd64/server
 
 # CUDA
-export CUDA_ROOT=/usr/local/cuda
+#export CUDA_ROOT=/usr/local/cuda
 
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-9.1/lib64"
+#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
+#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-9.1/lib64"
 
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
-export PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
+#export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+#export PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
 
-export CUDA_VISIBLE_DEVICES=0
-export GPUARRAY_CUDA_VERSION=91
+#export CUDA_VISIBLE_DEVICES=0
+#export GPUARRAY_CUDA_VERSION=91
+
+# set PATH for cuda 10.0 installation
+if [ -d "/usr/local/cuda-10.0/bin/" ]; then
+    export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+fi
 
 # coursier path
 export PATH="/home/xuedong/Programming/Trochilus:$PATH"
