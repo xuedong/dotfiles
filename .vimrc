@@ -38,6 +38,9 @@ call plug#begin('~/.vim/plugged')
 
 " add all plugins here
 Plug 'fatih/vim-go'
+Plug 'lervag/vimtex'
+Plug 'honza/vim-snippets'
+Plug 'sirver/ultisnips'
 
 " all plugins must be added before this line
 call plug#end()
@@ -112,3 +115,17 @@ set shiftwidth=4
 
 " ycmd server troubleshooting
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
+
+" vimtex configuration
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+" UltiSnips configuration
+let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
