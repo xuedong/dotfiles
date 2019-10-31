@@ -99,6 +99,11 @@ syntax on
 "	colorscheme zenburn
 "endif
 
+" search highlight
+set hlsearch
+hi Search ctermbg=Yellow
+hi Search ctermfg=Red
+
 " switching between color schemes
 call togglebg#map("<F5>")
 
@@ -124,7 +129,7 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 " UltiSnips configuration
-let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
+let g:UltiSnipsSnippetDirectories = ["/home/xuedong/.vim/plugged/vim-snippets/UltiSnips/", "UltiSnips"]
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
