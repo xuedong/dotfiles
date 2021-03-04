@@ -124,16 +124,16 @@ fi
 alias vpn='/opt/cisco/anyconnect/bin/vpn'
 
 # added by Anaconda3 installer
-export PATH="/home/xuedong/Programming/Trochilus/anaconda3/bin:$PATH"
+# export PATH="/home/xuedong/Programming/Trochilus/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # julia path
-export PATH="/home/xuedong/Programming/Trochilus/julia-1.0.0/bin:$PATH"
+export PATH="/home/xuedong/Programming/Trochilus/julia-1.2.0/bin:$PATH"
 
 # Rust path
 export PATH="/home/xuedong/.cargo/bin:$PATH"
 
 # PyCharm Pro path
-export PATH="/home/xuedong/Programming/Trochilus/pycharm-professional-2019.1.3/pycharm-2019.1.3/bin:$PATH"
+export PATH="/home/xuedong/Programming/Trochilus/pycharm-professional-2019.2/pycharm-2019.2/bin:$PATH"
 
 # linux logo
 #linuxlogo -L 14
@@ -195,3 +195,40 @@ source ~/.aliases
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/xuedong/.sdkman"
 [[ -s "/home/xuedong/.sdkman/bin/sdkman-init.sh" ]] && source "/home/xuedong/.sdkman/bin/sdkman-init.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/xuedong/Programming/Trochilus/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/xuedong/Programming/Trochilus/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/xuedong/Programming/Trochilus/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/xuedong/Programming/Trochilus/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# wakatime for bash
+#
+# include this file in your "~/.bashrc" file with this command:
+#   . path/to/bash-wakatime.sh
+#
+# or this command:
+#   source path/to/bash-wakatime.sh
+#
+# Don't forget to create and configure your "~/.wakatime.cfg" file.
+
+# hook function to send wakatime a tick
+pre_prompt_command() {
+    version="1.0.0"
+    entity=$(echo $(fc -ln -0) | cut -d ' ' -f1)
+    [ -z "$entity" ] && return # $entity is empty or only whitespace
+    $(git rev-parse --is-inside-work-tree 2> /dev/null) && local project="$(basename $(git rev-parse --show-toplevel))" || local project="Terminal"
+    (wakatime --write --plugin "bash-wakatime/$version" --entity-type app --project "$project" --entity "$entity" 2>&1 > /dev/null &)
+}
+
+PROMPT_COMMAND="pre_prompt_command; $PROMPT_COMMAND"
+
