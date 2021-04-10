@@ -97,6 +97,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# pip aliase
+alias pip=pip3
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -123,9 +126,6 @@ fi
 
 alias vpn='/opt/cisco/anyconnect/bin/vpn'
 
-# added by Anaconda3 installer
-# export PATH="/home/xuedong/Programming/Trochilus/anaconda3/bin:$PATH"  # commented out by conda initialize
-
 # julia path
 export PATH="/home/xuedong/Programming/Trochilus/julia-1.2.0/bin:$PATH"
 
@@ -147,6 +147,10 @@ fi
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH=/home/xuedong/Programming/Languages/Golang/go
 export PATH="$GOPATH/bin:$PATH"
+
+# kdb+ path
+export QHOME=/home/xuedong/Programming/Trochilus/q
+export PATH="$QHOME:$PATH"
 
 # Java interface for R
 export LD_LIBRARY_PATH=/usr/lib/jvm/default-java/lib/amd64:/usr/lib/jvm/default-java/jre/lib/amd64/server
