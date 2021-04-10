@@ -149,8 +149,8 @@ export GOPATH=/home/xuedong/Programming/Languages/Golang/go
 export PATH="$GOPATH/bin:$PATH"
 
 # kdb+ path
-export QHOME=/home/xuedong/Programming/Trochilus/q
-export PATH="$QHOME:$PATH"
+#export QHOME=/home/xuedong/Programming/Trochilus/q
+#export PATH="$QHOME:$PATH"
 
 # Java interface for R
 export LD_LIBRARY_PATH=/usr/lib/jvm/default-java/lib/amd64:/usr/lib/jvm/default-java/jre/lib/amd64/server
